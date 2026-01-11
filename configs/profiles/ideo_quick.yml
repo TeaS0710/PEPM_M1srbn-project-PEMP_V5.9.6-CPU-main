@@ -1,0 +1,40 @@
+profile: ideo_quick
+description: Ideology_global – QUICK (web1 par défaut). Binaire left/right (baseline).
+pipeline_version: 5.9.6
+
+# Corpus / labels
+corpus_id: web1
+view: ideology_global
+modality: web
+ideology:
+  mode: actors
+  view: binary
+  unknown_actors:
+    policy: drop
+  actors_yaml: configs/label_maps/ideology_actors.yml
+
+# Data preparation
+train_prop: 0.8
+min_chars: 200
+max_tokens: 512
+tokenizer: split
+shard_docs: 10000
+shard_rows: 20000
+seed: 52
+
+# Dedup / balancing
+# - dedup_on=text évite les doublons exacts qui gonflent artificiellement les scores
+# - class_weights gère le déséquilibre naturel left/right
+
+dedup_on: text
+balance_strategy: class_weights
+balance_preset: null
+
+# Models
+families:
+  - sklearn
+models_sklearn:
+  - tfidf_svm_quick
+
+# Hardware
+hardware_preset: small

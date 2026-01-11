@@ -1,0 +1,22 @@
+# Remplis chaque valeur avec: gauche / droite (ou autre label si besoin)
+# Clés normalisées depuis les libellés du corpus. Les commentaires indiquent #docs et exemples.
+crawl_fdesouche_20251003_231247: 'droite'  # 184413 docs | ex: crawl-fdesouche-20251003_231247×184413
+crawl_er_20251003_231234: 'droite'  # 75902 docs | ex: crawl-er-20251003_231234×75902
+crawl_lo_full_20250928_001323: 'gauche'  # 62772 docs | ex: crawl-lo-full-20250928_001323×62772
+crawl_revperm_20250928_003219: 'gauche'  # 57101 docs | ex: crawl-revperm-20250928_003219×57101
+crawl_initiative_communiste_20250928_003234: 'gauche'  # 36767 docs | ex: crawl-initiative-communiste-20250928_003234×36767
+crawl_contretemps_20250928_003525: 'gauche'  # 19140 docs | ex: crawl-contretemps-20250928_003525×19140
+crawl_polemia_20250928_003004: 'droite'  # 14037 docs | ex: crawl-polemia-20250928_003004×14037
+crawl_ucl_20250928_003510: 'gauche'  # 11792 docs | ex: crawl-ucl-20250928_003510×11792
+crawl_lundi_am_20250928_003202: 'gauche'  # 11708 docs | ex: crawl-lundi-am-20250928_003202×11708
+crawl_jean_jaures_20250928_003513: 'gauche'  # 11359 docs | ex: crawl-jean-jaures-20250928_003513×11359
+crawl_actionfrancaise_20251003_000000: 'droite'  # 10627 docs | ex: crawl-actionfrancaise-20251003_000000×10627
+crawl_lfi_full_20250928_000133: 'gauche'  # 8836 docs | ex: crawl-lfi-full-20250928_000133×8836
+crawl_npa_full_20250928_001251: 'gauche'  # 8314 docs | ex: crawl-npa-full-20250928_001251×8314
+crawl_terranova_20250928_003520: 'gauche'  # 3758 docs | ex: crawl-terranova-20250928_003520×3758
+crawl_lr_full_20250928_001404: 'droite'  # 961 docs | ex: crawl-lr-full-20250928_001404×961
+crawl_ps_full_20250928_000302: 'gauche'  # 803 docs | ex: crawl-ps-full-20250928_000302×803
+crawl_hut_fr_20251003_231255: 'droite'  # 753 docs | ex: crawl-hut-fr-20251003_231255×753
+crawl_eco_full_20250928_000354: 'gauche'  # 674 docs | ex: crawl-eco-full-20250928_000354×674
+crawl_rn_full_20250927_234616: 'droite'  # 455 docs | ex: crawl-rn-full-20250927_234616×455
+crawl_cce_full_20250927_234505: 'droite'  # 161 docs | ex: crawl-cce-full-20250927_234505×161

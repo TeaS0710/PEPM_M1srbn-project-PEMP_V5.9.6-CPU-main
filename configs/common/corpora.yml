@@ -1,0 +1,13 @@
+web1:
+  corpus_id: web1
+  corpus_path: data/raw/web1/corpus.xml
+  encoding: utf-8
+  default_modality: web
+  notes: Corpus web (canonical) — remplacer data/raw/web1/corpus.xml si besoin.
+asr1:
+  corpus_id: asr1
+  corpus_path: data/raw/asr1/corpus.xml
+  language: fr
+  encoding: utf-8
+  default_modality: asr
+  notes: Corpus ASR (canonical) — remplacer data/raw/asr1/corpus.xml si besoin.

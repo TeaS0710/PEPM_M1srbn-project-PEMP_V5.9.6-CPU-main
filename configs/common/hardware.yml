@@ -1,0 +1,31 @@
+presets:
+  small:
+    desc: Laptop / petite machine
+    ram_gb: 8
+    max_procs: 2
+    blas_threads: 1
+    tsv_chunk_rows: 20000
+    spacy_shard_docs: 10000
+    max_train_docs_spacy: 20000
+    max_train_docs_sklearn: 100000
+    max_train_docs_hf: 5000
+  medium:
+    desc: Machine intermédiaire
+    ram_gb: 16
+    max_procs: 4
+    blas_threads: 2
+    tsv_chunk_rows: 50000
+    spacy_shard_docs: 25000
+    max_train_docs_spacy: 50000
+    max_train_docs_sklearn: 50000
+    max_train_docs_hf: 20000
+  lab:
+    desc: Machine labo / serveur (16 cœurs / 48 Go)
+    ram_gb: 39
+    max_procs: 7
+    blas_threads: 2
+    tsv_chunk_rows: 100000
+    spacy_shard_docs: 60000
+    max_train_docs_spacy: 100000
+    max_train_docs_sklearn: 120000
+    max_train_docs_hf: 10000

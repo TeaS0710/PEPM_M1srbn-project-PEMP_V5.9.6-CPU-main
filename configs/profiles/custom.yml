@@ -1,0 +1,32 @@
+profile: custom
+description: Analyse crawl complète (sklearn) sur web1, vue crawl (cap docs par label).
+pipeline_version: 5.9.6
+
+corpus_id: web1
+view: crawl
+label_field: crawl
+modality: web
+
+tokenizer: whitespace
+dedup_on: none
+
+train:
+  train_prop: 0.8
+  min_chars: 400
+  max_tokens: 512
+  seed: 42
+
+balance_strategy: cap_docs
+balance_preset: capdocs_crawl_3k
+hardware_preset: lab
+
+families:
+  - sklearn
+
+models_sklearn:
+  - tfidf_svm_quick
+  - tfidf_smo_linear
+  - tfidf_smo_rbf
+  - tfidf_perceptron
+  - tfidf_randomtree
+  - tfidf_randomforest

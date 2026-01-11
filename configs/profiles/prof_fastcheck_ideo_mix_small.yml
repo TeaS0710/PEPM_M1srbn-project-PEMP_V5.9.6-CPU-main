@@ -1,0 +1,34 @@
+profile: prof_fastcheck_ideo_mix_small
+description: PROF – fastcheck idéologie (mix), exécution rapide sur un sous-ensemble.
+pipeline_version: 5.9.6
+
+corpus_id: web1
+corpora:
+  - corpus_id: web1
+  - corpus_id: asr1
+view: ideology_global
+modality: null
+
+ideology:
+  mode: actors
+  view: binary
+  unknown_actors:
+    policy: drop
+  actors_yaml: configs/label_maps/ideology_actors.yml
+
+train:
+  train_prop: 0.7
+  min_chars: 200
+  max_tokens: 512
+  seed: 52
+
+tokenizer: split
+dedup_on: text
+balance_strategy: class_weights
+hardware_preset: small
+max_docs_global: 2000
+
+families:
+  - sklearn
+models_sklearn:
+  - tfidf_svm_quick

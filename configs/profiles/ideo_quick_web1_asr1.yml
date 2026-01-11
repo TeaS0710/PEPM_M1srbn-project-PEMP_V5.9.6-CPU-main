@@ -1,0 +1,43 @@
+profile: ideo_quick_web1_asr1
+description: Ideology_global (mix web1+asr1) – QUICK (juxtaposition des deux sources).
+pipeline_version: 5.9.6
+
+# Corpus (mix): web1 + asr1
+corpus_id: web1
+corpora:
+  - corpus_id: web1
+  - corpus_id: asr1
+view: ideology_global
+modality: null
+
+# Labels
+ideology:
+  mode: actors
+  view: binary
+  unknown_actors:
+    policy: drop
+  actors_yaml: configs/label_maps/ideology_actors.yml
+
+# Data prep / training
+train:
+  train_prop: 0.7
+  min_chars: 200
+  max_tokens: 512
+  seed: 52
+
+tokenizer: split
+dedup_on: text
+balance_strategy: class_weights
+hardware_preset: small
+
+# Models
+families:
+  - sklearn
+models_sklearn:
+  - tfidf_svm_quick
+
+# Extra breakdowns at evaluation time (if the TSV contains these fields)
+analysis:
+  compare_by:
+    - corpus_id
+    - modality

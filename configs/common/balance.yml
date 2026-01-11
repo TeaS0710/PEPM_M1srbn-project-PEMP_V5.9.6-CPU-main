@@ -1,0 +1,71 @@
+strategies:
+  none:
+    desc: Pas d'équilibrage, distribution brute
+  alpha_total:
+    desc: Répartition alpha / total_docs (type V2/V4)
+    presets:
+      default_alpha_total:
+        alpha: 0.5
+        total_docs: 50000
+      small_alpha_total:
+        alpha: 0.3
+        total_docs: 20000
+      alpha_crawl_medium:
+        alpha: 0.2
+        total_docs: 60000
+        offset: 0
+  cap_docs:
+    desc: Limiter le nombre de documents par label (cap docs, option oversample)
+    presets:
+      parity:
+        cap_per_label: 2000
+        oversample: true
+        offset: 0
+      capdocs_1k_oversample:
+        cap_per_label: 1000
+        oversample: true
+        offset: 0
+      capdocs_crawl_3k:
+        cap_per_label: 3000
+        oversample: false
+        offset: 0
+  cap_tokens:
+    desc: Limiter le nombre total de tokens par label (diagnostic / expérimental)
+    presets: {}
+  class_weights:
+    desc: Pas de sélection de docs ; calcul des poids de classe pour les modèles compatibles
+    presets: {}
+presets:
+  default_alpha_total:
+    strategy: alpha_total
+    alpha: 0.5
+    total_docs: 50000
+  small_alpha_total:
+    strategy: alpha_total
+    alpha: 0.3
+    total_docs: 20000
+  alpha_crawl_medium:
+    strategy: alpha_total
+    alpha: 0.2
+    total_docs: 60000
+    offset: 0
+  parity:
+    strategy: cap_docs
+    cap_per_label: 2000
+    oversample: true
+    offset: 0
+  capdocs_1k_oversample:
+    strategy: cap_docs
+    cap_per_label: 1000
+    oversample: true
+    offset: 0
+  capdocs_crawl_3k:
+    strategy: cap_docs
+    cap_per_label: 3000
+    oversample: false
+    offset: 0
+  small_alpha:
+    strategy: alpha_total
+    alpha: 0.3
+    total_docs: 20000
+    desc: (alias)
