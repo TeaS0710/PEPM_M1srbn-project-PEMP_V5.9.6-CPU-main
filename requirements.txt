@@ -1,0 +1,28 @@
+# Dépendances de base
+pyyaml>=6.0
+tqdm>=4.66
+joblib>=1.3
+numpy>=1.26
+scikit-learn>=1.5
+rich>=13.0.0
+
+# NLP
+spacy>=3.7,<3.8
+pydantic<2  # spaCy attendu avec pydantic v1 (corrige l'erreur ConstrainedStr)
+transformers>=4.44
+sentencepiece>=0.1.99
+sacremoses>=0.1.1
+accelerate>=0.30.0
+datasets>=2.21
+torch>=2.3
+
+# TEI / XML
+lxml>=5.0
+
+# Post-traitement / agrégation
+pandas>=2.2
+
+matplotlib>=3.8
+
+# (run_single)
+psutil>=5.9
