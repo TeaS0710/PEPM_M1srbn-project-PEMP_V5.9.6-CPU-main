@@ -1,5 +1,7 @@
 # PEPM – Projet Étude Politique Master (Pipeline PEMP)
 
+**Repo Github : ```https://github.com/TeaS0710/PEPM_M1srbn-project-PEMP_V5.9.6-CPU-main/tree/main```**
+
 Version: **5.9.6** (CPU-min)
 
 Ce dépôt contient une version **réduite** du pipeline PEMP utilisée pour PEPM :
@@ -12,11 +14,6 @@ Objectif de la réduction : garder **l’essentiel pour reproduire les analyses*
 ## Prérequis
 - Python 3.11+ (testé avec Python 3.12)
 - Données TEI dans `data/raw/<corpus_id>/corpus.xml` (non incluses ici)
-- Mettre les corpus dans `data/raw/asr1/corpus.xml` & `data/raw/web1/corpus.xml`
-- lien Swiss Transfert pour download les corpus
-```
-https://www.swisstransfer.com/d/c99b8c9d-35e3-4e2e-91e0-751eb282543f
-```
 
 ## Installation
 
@@ -27,9 +24,6 @@ pip install -U pip
 pip install -r requirements.txt
 make setup
 ```
-
-> Notes :
-> - `requirements-full.txt` correspond à l’environnement complet historique (spaCy/HF). Cette version 5.9.6 se limite volontairement à sklearn.
 
 ## Commandes principales
 
@@ -78,6 +72,11 @@ make clean
 - `scripts/core/` : préparation / entraînement / évaluation
 - `scripts/tools/` : audits et sysinfo
 - `scripts/post/` : agrégation des métriques
+
+## Placement manuel des corpus ASR & web
+
+- `data/raw/web1/corpus.xml` : placement manuel du corpus WEB 1
+- `data/raw/asr1/corpus.xml` : placement manuel du corpus ASR 1
 
 ## Sorties
 
