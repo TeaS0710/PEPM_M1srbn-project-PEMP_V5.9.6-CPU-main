@@ -14,6 +14,8 @@ Objectif de la réduction : garder **l’essentiel pour reproduire les analyses*
 ## Prérequis
 - Python 3.11+ (testé avec Python 3.12)
 - Données TEI dans `data/raw/<corpus_id>/corpus.xml` (non incluses ici)
+- Installer manuellement les corpus
+```https://www.swisstransfer.com/d/c99b8c9d-35e3-4e2e-91e0-751eb282543f```
 
 ## Installation
 
